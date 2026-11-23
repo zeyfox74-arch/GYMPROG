@@ -195,6 +195,100 @@ h2.view-title{font-size:22px;font-weight:800;margin:0 0 4px;letter-spacing:-.2px
   .col{flex-basis:264px}
   h2.view-title{font-size:20px}
 }
+/* coach */
+.btn-an{display:inline-flex;align-items:center;gap:7px;border:1px solid #2f6b4f;background:#13261d;color:#74e0ad;border-radius:10px;padding:8px 12px;font-weight:700;font-size:14px}
+.head-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.summary{flex-wrap:wrap}.summary .btn-an{margin-left:auto;flex:none}
+@media (max-width:520px){.summary .btn-an{width:100%;justify-content:center;margin-left:0}}
+.sugg-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.sugg{background:#111317;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.sugg-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sugg p{margin:4px 0;font-size:13px;color:var(--muted)}
+.sugg-meta{font-size:12.5px;color:var(--text);font-weight:700}
+.sugg-meta a,.an-item a,.an-src a{color:#8fbcff}
+.sugg-act{display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.sugg-act select{background:#1b1e23;border:1px solid var(--line);border-radius:8px;padding:7px 8px;flex:1;min-width:120px}
+.sugg-act .btn{padding:7px 12px}
+.pill{font-size:11px;font-weight:800;border-radius:999px;padding:2px 8px;background:rgba(62,207,142,.14);color:#74e0ad}
+.an-score{border-radius:12px;padding:12px 14px;margin-bottom:12px;border:1px solid var(--line)}
+.an-score b{display:block;font-size:16px}
+.an-score span{font-size:13px;color:var(--muted)}
+.an-score.good{background:rgba(62,207,142,.08);border-color:rgba(62,207,142,.35)}
+.an-score.warn{background:rgba(245,177,67,.07);border-color:rgba(245,177,67,.3)}
+.an-item{border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:12px;padding:10px 12px;margin-bottom:8px;background:#15171b}
+.an-low{border-left-color:var(--low)} .an-high{border-left-color:var(--high)} .an-tip{border-left-color:var(--ok)} .an-info{border-left-color:var(--accent)}
+.an-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.an-tag{font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.an-low .an-tag{color:var(--low)} .an-high .an-tag{color:var(--high)} .an-tip .an-tag{color:var(--ok)} .an-info .an-tag{color:#8fbcff}
+.an-item p{margin:5px 0 0;font-size:13.5px;color:#c9ced5}
+.an-item details,.an-src{margin-top:8px}
+.an-item summary,.an-src summary{cursor:pointer;font-weight:700;font-size:13.5px;color:var(--text)}
+.an-src{border-top:1px solid var(--line);padding-top:10px;margin:14px 0 6px}
+.an-src ul{padding-left:18px;margin:8px 0;font-size:13px}
+.an-src li{margin:4px 0}
+.an-src p{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+/* fiche une page (aperçu, image, impression) */
+.head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.btn-fiche{display:inline-flex;align-items:center;gap:7px;flex:none;border:1px solid #2f4b73;background:#152131;color:#8fbcff;border-radius:10px;padding:8px 12px;font-weight:700;font-size:14px}
+.fx{position:fixed;inset:0;z-index:40;background:#0b0c0f;display:none;flex-direction:column}
+.fx.open{display:flex}
+.fx-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;border-bottom:1px solid var(--line);background:var(--surface)}
+.fx-bar .grow{flex:1}
+.fx-bar label{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--muted)}
+.fx-bar input{accent-color:var(--accent);width:16px;height:16px}
+.fx-msg{width:100%;font-size:12.5px;color:var(--high);margin:0}
+.fx-msg:empty{display:none}
+.fx-body{flex:1;overflow:auto;padding:16px 12px calc(24px + env(safe-area-inset-bottom))}
+.fx-scale{transform-origin:top left;margin:0 auto}
+#fiche{width:794px;min-height:1123px;background:#fff;color:#14161a;font-family:var(--font-body);font-size:var(--fs,12px);line-height:1.3;padding:30px 32px 26px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:calc(var(--fs,12px)*1.05)}
+#fiche *{box-sizing:border-box}
+.f-head{display:flex;align-items:center;gap:14px;border-bottom:3px solid #14161a;padding-bottom:12px}
+.f-head img{width:52px;height:52px;border-radius:12px}
+.f-head h1{margin:0;font-family:var(--font-display);font-weight:400;font-size:30px;letter-spacing:.6px;text-transform:uppercase;line-height:1}
+.f-head p{margin:4px 0 0;color:#5d636c;font-size:13px;font-weight:600}
+.f-head .f-brand{margin-left:auto;text-align:right;font-size:11px;color:#5d636c;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
+.f-head .f-brand b{display:block;font-family:var(--font-display);font-weight:400;font-size:20px;color:#14161a;letter-spacing:.8px}
+.f-week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.f-week div{border:1px solid #d9dce1;border-radius:7px;padding:5px 4px;text-align:center;font-weight:700;font-size:calc(var(--fs,12px)*.95)}
+.f-week div small{display:block;font-size:10px;letter-spacing:.7px;color:#7a8089;text-transform:uppercase}
+.f-week div.on{background:#eef4fe;border-color:#bcd3f7;color:#1c4f9c}
+.f-week div.off{color:#a0a5ad;font-weight:600}
+.f-grid{column-count:2;column-gap:16px}
+.f-grid .f-sess{margin-bottom:calc(var(--fs,12px)*1.05);display:block}
+.f-sess{border:1px solid #d9dce1;border-radius:10px;overflow:hidden;break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid}
+.f-sh{display:flex;align-items:baseline;gap:6px;padding:7px 10px;background:var(--c);color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.4px;font-size:calc(var(--fs,12px)*1.02)}
+.f-sh span{margin-left:auto;font-weight:700;text-transform:none;letter-spacing:0;opacity:.9;font-size:calc(var(--fs,12px)*.92)}
+.f-sess table{width:100%;border-collapse:collapse}
+.f-sess th{text-align:left;font-size:calc(var(--fs,12px)*.78);text-transform:uppercase;letter-spacing:.5px;color:#7a8089;font-weight:800;padding:5px 6px 3px;border-bottom:1px solid #e3e6ea}
+.f-sess td{padding:calc(var(--fs,12px)*.36) 6px;border-bottom:1px solid #eef0f2;vertical-align:top}
+.f-sess tr:last-child td{border-bottom:0}
+.f-sess td.n{text-align:center;white-space:nowrap;font-weight:800;font-variant-numeric:tabular-nums}
+.f-sess td.r{text-align:center;white-space:nowrap;color:#4a5058;font-variant-numeric:tabular-nums}
+.f-sess th.c{text-align:center}
+.f-ex{font-weight:700}
+.f-mu{display:block;font-size:calc(var(--fs,12px)*.82);color:#6b717a;font-weight:600}
+.f-no{display:block;font-size:calc(var(--fs,12px)*.8);color:#6b717a;font-style:italic;margin-top:1px}
+.f-warm td{color:#8a9099}
+.f-warm .f-ex{font-weight:600;font-style:italic}
+.f-vol{border-top:2px solid #14161a;padding-top:9px;margin-top:auto}
+.f-vol h4{margin:0 0 6px;font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:#5d636c}
+.f-vol div{display:flex;flex-wrap:wrap;gap:4px 6px}
+.f-vol span{border:1px solid #d9dce1;border-radius:6px;padding:2px 7px;font-size:calc(var(--fs,12px)*.86);font-weight:700}
+.f-vol span i{font-style:normal;color:#6b717a;font-weight:600}
+.f-vol span.ok{border-color:#9fdcbf;background:#effaf4}
+.f-vol span.low{border-color:#f5b4ad;background:#fff2f0}
+.f-vol span.high{border-color:#f3d39b;background:#fff8ec}
+.f-foot{display:flex;justify-content:space-between;font-size:10px;color:#9aa0a8;font-weight:600}
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{background:#fff!important}
+  body>*:not(#fx){display:none!important}
+  #fx{position:static;display:block!important;background:#fff}
+  .fx-bar{display:none!important}
+  .fx-body{padding:0;overflow:visible}
+  .fx-scale{transform:none!important;width:auto!important;height:auto!important}
+  #fiche{box-shadow:none;width:210mm;min-height:0;height:297mm;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
 </style>
 
 </head>
@@ -217,6 +311,17 @@ h2.view-title{font-size:22px;font-weight:800;margin:0 0 4px;letter-spacing:-.2px
   <section id="view"></section>
 </main>
 
+<div class="fx" id="fx" role="dialog" aria-modal="true" aria-label="Fiche programme">
+  <div class="fx-bar">
+    <button class="btn ghost" id="fxClose" type="button">Fermer</button>
+    <label for="fxNotes"><input type="checkbox" id="fxNotes" checked>Remarques</label>
+    <span class="grow"></span>
+    <button class="btn" id="fxPrint" type="button">Imprimer / PDF</button>
+    <button class="btn primary" id="fxShare" type="button">Partager l'image</button>
+    <p class="fx-msg" id="fxMsg" role="status"></p>
+  </div>
+  <div class="fx-body"><div class="fx-scale" id="fxScale"><div id="fiche"></div></div></div>
+</div>
 <div class="scrim" id="scrim" aria-hidden="true"><div class="sheet" role="dialog" aria-modal="true" id="sheet"></div></div>
 
 <script>
@@ -443,7 +548,7 @@ function summaryCard(V){
   var days=state.sessions.filter(function(s){return s.day!==""&&s.day!=null}).length;
   var msg=!tracked?"Ajoute des muscles à suivre":ok===tracked?"Programme équilibré":(low+high)+" muscle"+(low+high>1?"s":"")+" à ajuster";
   return '<div class="summary"><div class="ring"><svg width="74" height="74" viewBox="0 0 74 74" aria-hidden="true"><circle cx="37" cy="37" r="'+R+'" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="8"/><circle cx="37" cy="37" r="'+R+'" fill="none" stroke="'+col+'" stroke-width="8" stroke-linecap="round" stroke-dasharray="'+(C*pct)+' '+C+'" transform="rotate(-90 37 37)"/></svg><b>'+ok+'/'+tracked+'</b></div>'+
-    '<div class="sum-txt"><strong>'+msg+'</strong><div class="stats"><span><b>'+fmt(totalSets())+'</b> séries / sem</span><span><b>'+days+'</b> séance'+(days>1?'s':'')+' / sem</span>'+(low?'<span class="st low">'+low+' en manque</span>':'')+(high?'<span class="st high">'+high+' en trop</span>':'')+'</div></div></div>';
+    '<div class="sum-txt"><strong>'+msg+'</strong><div class="stats"><span><b>'+fmt(totalSets())+'</b> séries / sem</span><span><b>'+days+'</b> séance'+(days>1?'s':'')+' / sem</span>'+(low?'<span class="st low">'+low+' en manque</span>':'')+(high?'<span class="st high">'+high+' en trop</span>':'')+'</div></div>'+'<button class="btn-an" type="button" data-analyse="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Analyser</button>'+'</div>';
 }
 function viewPriorities(){
   var V=volumes();
@@ -487,7 +592,7 @@ function chip(id,sec){
 }
 function viewProgramme(){
   var byDay={};state.sessions.forEach(function(s){if(s.day!=null&&s.day!=="")byDay[s.day]=s});
-  var h='<h2 class="view-title">Programme</h2><p class="view-sub">Touche un exercice pour le modifier. Sur ordinateur, tu peux aussi le glisser vers une autre séance.</p><div class="week">';
+  var h='<div class="head-row"><h2 class="view-title">Programme</h2><div class="head-btns"><button class="btn-an" type="button" data-analyse="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Analyser</button><button class="btn-fiche" type="button" id="openFiche"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>Fiche</button></div></div><p class="view-sub">Touche un exercice pour le modifier. Sur ordinateur, tu peux aussi le glisser vers une autre séance.</p><div class="week">';
   DAYS_SHORT.forEach(function(d,i){var s=byDay[i];h+='<div class="day'+(s?' on':' off')+'"><b>'+d+'</b><span>'+(s?esc(s.name):'OFF')+'</span></div>'});
   h+='</div><div class="section-h"><h3>Séances</h3></div><div class="board">';
   sortedSessions().forEach(function(s){
@@ -549,10 +654,13 @@ function editMuscle(id,newLevel){
     h+='<p style="margin:0 0 6px"><b>'+fmt(V[m.id].total)+' séries effectives</b> · <span class="st '+st.k+'">'+esc(st.t)+'</span> · '+V[m.id].freq+'×/sem</p>';
     h+=contrib.length?'<ul class="contrib">'+contrib.map(function(c){return '<li>'+c+'</li>'}).join("")+'</ul>':'<p class="contrib" style="padding:0">Aucun exercice ne cible ce muscle.</p>';
   }
+  var lowBy=0;if(!isNew){var Lm=lvl(m.level);if(Lm.max&&V[m.id].total<Lm.min)lowBy=Lm.min-V[m.id].total}
+  if(!isNew&&LIB[m.id])h+='<details style="margin-top:12px"'+(lowBy?' open':'')+'><summary style="cursor:pointer;font-weight:700">'+(lowBy?'Il manque '+fmt(lowBy)+' séries : exercices conseillés':'Exercices conseillés')+'</summary>'+suggestionBlock(m.id,lowBy)+'</details>';
   h+='<div class="btns" style="margin-top:16px"><button class="btn primary" id="mSave" type="button">Enregistrer</button><button class="btn ghost" id="mCancel" type="button">Annuler</button>'+(isNew?'':'<button class="btn danger" id="mDel" type="button">Supprimer</button>')+'</div>';
   openSheet(h,function(sh){
     sh.querySelectorAll("[data-pick]").forEach(function(b){b.addEventListener("click",function(){cur=b.dataset.pick;sh.querySelectorAll("[data-pick]").forEach(function(x){x.setAttribute("aria-pressed",x.dataset.pick===cur?"true":"false")})})});
     sh.querySelector("#mCancel").addEventListener("click",closeSheet);
+    if(!isNew&&LIB[m.id])bindSuggestions(sh,m.id,lowBy);
     sh.querySelector("#mSave").addEventListener("click",function(){
       var name=sh.querySelector("#mName").value.trim();if(!name){sh.querySelector("#mName").focus();return}
       m.name=name;m.level=cur;if(isNew)state.muscles.push(m);closeSheet();commit();
@@ -663,8 +771,275 @@ function editSettings(){
   });
 }
 
+/* ---------- coach : bibliothèque d'exercices et analyse (basées sur les études) ---------- */
+var SRC={
+  pelland:{t:"Pelland et al. 2024 : volume hebdomadaire, séries indirectes comptées 0,5",u:"https://sportrxiv.org/index.php/server/preprint/view/460"},
+  remmert:{t:"Remmert et al. 2025 : au-delà d'environ 11 séries effectives par séance, le gain devient indétectable",u:"https://sportrxiv.org/index.php/server/preprint/view/537"},
+  maeo21:{t:"Maeo et al. 2021 : leg curl assis > leg curl couché (+14 % vs +9 % de volume des ischios)",u:"https://pubmed.ncbi.nlm.nih.gov/33009197/"},
+  maeo23:{t:"Maeo et al. 2023 : extension triceps au-dessus de la tête > poulie haute (environ 1,4 fois plus de croissance)",u:"https://pubmed.ncbi.nlm.nih.gov/35819335/"},
+  kino23:{t:"Kinoshita et al. 2023 : mollets debout > mollets assis",u:"https://www.frontiersin.org/articles/10.3389/fphys.2023.1272106/full"},
+  wolf23:{t:"Wolf et al. 2023 : amplitude complète et travail en position étirée favorisent l'hypertrophie",u:"https://doaj.org/article/99e86b317bec40f5abc2f0008358737e"}
+};
+/* Exercices conseillés par muscle. stretch = le muscle travaille en position étirée. */
+var LIB={
+  epaules:[
+    {n:"Élévations latérales poulie basse",s:3,r:"12-20",rest:"90s",why:"Tension constante, y compris bras le long du corps où le deltoïde est étiré.",src:"wolf23",stretch:1},
+    {n:"Élévations latérales haltères",s:3,r:"12-20",rest:"90s",why:"La base pour le deltoïde latéral. Finis par quelques demi-reps en bas.",src:"wolf23"},
+    {n:"Développé militaire haltères",s:3,r:"8-12",rest:"2-3 min",sec:"triceps",why:"Bon complément lourd, travaille aussi le triceps."}
+  ],
+  dorsaux:[
+    {n:"Tirage vertical (étirement complet en haut)",s:3,r:"8-12",rest:"2 min",sec:"biceps",why:"Laisse les bras remonter jusqu'à l'étirement complet des dorsaux.",src:"wolf23",stretch:1},
+    {n:"Pull-over poulie",s:3,r:"12-15",rest:"90s",why:"Isole les dorsaux avec un fort étirement bras au-dessus de la tête.",stretch:1},
+    {n:"Rowing unilatéral haltère",s:3,r:"8-12",rest:"2 min",sec:"biceps",why:"Grande amplitude et travail unilatéral."}
+  ],
+  pecs:[
+    {n:"Développé incliné haltères",s:3,r:"8-12",rest:"2-3 min",sec:"triceps",why:"Descente profonde, pecs étirés en bas du mouvement.",src:"wolf23",stretch:1},
+    {n:"Écarté poulie vis-à-vis",s:3,r:"12-15",rest:"90s",why:"Tension maximale bras ouverts, en position étirée.",stretch:1},
+    {n:"Dips",s:3,r:"8-12",rest:"2 min",sec:"triceps",why:"Polyarticulaire avec un bon étirement des pecs."}
+  ],
+  biceps:[
+    {n:"Curl incliné haltères",s:3,r:"8-12",rest:"90s",why:"Bras derrière le corps : le biceps travaille étiré.",src:"wolf23",stretch:1},
+    {n:"Curl pupitre",s:3,r:"8-12",rest:"90s",why:"Charge maximale en bas du mouvement, biceps allongé.",stretch:1},
+    {n:"Curl marteau",s:3,r:"10-12",rest:"90s",sec:"avbras",why:"Cible aussi le brachial et les avant-bras."}
+  ],
+  triceps:[
+    {n:"Extension triceps au-dessus de la tête (poulie)",s:3,r:"10-15",rest:"90s",why:"Environ 1,4 fois plus de croissance qu'à la poulie haute.",src:"maeo23",stretch:1},
+    {n:"Barre au front (skull crusher)",s:3,r:"8-12",rest:"90s",why:"Descends la barre derrière la tête pour étirer la longue portion.",stretch:1},
+    {n:"Dips",s:3,r:"8-12",rest:"2 min",sec:"pecs",why:"Polyarticulaire lourd pour les triceps."}
+  ],
+  quads:[
+    {n:"Hack squat profond",s:3,r:"8-12",rest:"2-3 min",sec:"fessiers",why:"Descends bas : les quadriceps travaillent étirés.",src:"wolf23",stretch:1},
+    {n:"Leg extension (dossier incliné vers l'arrière)",s:3,r:"10-15",rest:"90s",why:"Dossier en arrière = droit fémoral plus étiré.",stretch:1},
+    {n:"Fentes bulgares",s:3,r:"8-12",rest:"2 min",sec:"fessiers",why:"Unilatéral, grande amplitude."}
+  ],
+  ischios:[
+    {n:"Leg curl assis",s:3,r:"10-15",rest:"90s",why:"+14 % de croissance des ischios contre +9 % en leg curl couché.",src:"maeo21",stretch:1},
+    {n:"Soulevé de terre jambes tendues (RDL)",s:3,r:"8-10",rest:"2-3 min",sec:"fessiers",why:"Charnière de hanche avec fort étirement des ischios.",stretch:1}
+  ],
+  fessiers:[
+    {n:"Fentes bulgares (buste penché)",s:3,r:"8-12",rest:"2 min",sec:"quads",why:"Fessiers très étirés en bas du mouvement.",stretch:1},
+    {n:"Hip thrust",s:3,r:"8-12",rest:"2 min",sec:"ischios",why:"Charge lourde, bon complément."},
+    {n:"Abducteur machine (buste penché en avant)",s:3,r:"12-20",rest:"90s",why:"Cible le moyen fessier."}
+  ],
+  arriere:[
+    {n:"Oiseau poulie (câbles croisés)",s:3,r:"12-20",rest:"90s",why:"Tension constante sur l'arrière d'épaule.",stretch:1},
+    {n:"Reverse pec deck",s:3,r:"12-20",rest:"90s",why:"Simple et stable pour charger l'arrière d'épaule."},
+    {n:"Face pull",s:3,r:"12-20",rest:"90s",sec:"traps",why:"Travaille aussi les trapèzes et la coiffe."}
+  ],
+  mollets:[
+    {n:"Mollets debout (machine ou presse)",s:4,r:"10-15",rest:"90s",why:"Debout, les gastrocnémiens grossissent plus qu'assis. Marque une pause en bas.",src:"kino23",stretch:1},
+    {n:"Mollets à la presse",s:3,r:"10-15",rest:"90s",why:"Jambes tendues, bonne amplitude en bas.",stretch:1}
+  ],
+  abdos:[
+    {n:"Crunch à la poulie",s:3,r:"10-15",rest:"60-90s",why:"Facile à charger progressivement."},
+    {n:"Relevés de jambes suspendu",s:3,r:"10-15",rest:"60-90s",why:"Travaille aussi le bas des abdos et le gainage."}
+  ],
+  traps:[
+    {n:"Shrugs haltères",s:3,r:"10-15",rest:"90s",why:"Isolation directe des trapèzes supérieurs."},
+    {n:"Rowing prise large coudes ouverts",s:3,r:"10-12",rest:"2 min",sec:"arriere",why:"Trapèzes moyens et arrière d'épaule."}
+  ],
+  adduct:[
+    {n:"Adducteur machine",s:3,r:"12-15",rest:"90s",why:"Isolation simple des adducteurs."},
+    {n:"Squat pieds écartés profond",s:3,r:"8-12",rest:"2-3 min",sec:"fessiers",why:"Un squat profond fait aussi grossir les adducteurs.",stretch:1}
+  ],
+  avbras:[
+    {n:"Curl inversé",s:2,r:"12-15",rest:"60s",why:"Cible les extenseurs de l'avant-bras."},
+    {n:"Curl poignets",s:2,r:"15-20",rest:"60s",why:"Isolation des fléchisseurs."}
+  ]
+};
+var LOWER={quads:1,ischios:1,fessiers:1,adduct:1,mollets:1};
+function regionOf(s){var up=0,lo=0;s.exercises.forEach(function(e){var n=Number(e.sets)||0;if(!e.main||!n)return;if(LOWER[e.main])lo+=n;else if(e.main!=="abdos")up+=n});return lo>up?"lower":up>0?"upper":"any"}
+function bestSession(mid){
+  var want=LOWER[mid]?"lower":mid==="abdos"?"any":"upper";
+  var V=volumes(),per=V[mid]?V[mid].per:{};
+  var list=state.sessions.map(function(s){
+    var r=regionOf(s),score=sessSets(s);
+    if(want!=="any"&&r!==want&&r!=="any")score+=100;
+    if(per[s.id]>=1)score+=40;
+    return {s:s,score:score};
+  }).sort(function(a,b){return a.score-b.score});
+  return list.length?list[0].s:null;
+}
+function sessionTotalFor(s,mid){var t=0;s.exercises.forEach(function(e){var n=Number(e.sets)||0;if(e.main===mid)t+=n;else if(e.sec===mid)t+=n*state.coef});return t}
+function hasEx(mid,re){var f=false;state.sessions.forEach(function(s){s.exercises.forEach(function(e){if((e.main===mid)&&re.test(e.name.toLowerCase()))f=true})});return f}
+function trainsMain(mid){var f=false;state.sessions.forEach(function(s){s.exercises.forEach(function(e){if(e.main===mid&&Number(e.sets))f=true})});return f}
+function suggestFor(mid,missing){
+  var lib=LIB[mid]||[];var have={};state.sessions.forEach(function(s){s.exercises.forEach(function(e){have[e.name.toLowerCase()]=1})});
+  return lib.filter(function(x){return !have[x.n.toLowerCase()]}).map(function(x){
+    var sets=missing?Math.max(2,Math.min(4,Math.ceil(missing))):x.s;
+    return {x:x,sets:sets};
+  });
+}
+function addSuggested(mid,x,sets,sessId){
+  var s=state.sessions.filter(function(o){return o.id===sessId})[0];if(!s)return;
+  s.exercises.push(ex(x.n,sets,x.r,x.rest,mid,x.sec&&muscle(x.sec)?x.sec:"",[x.why]));
+  commit();
+}
+function sessionSelect(id,sel){
+  return '<select id="'+id+'" aria-label="Séance où ajouter">'+sortedSessions().map(function(s){return '<option value="'+s.id+'"'+(s.id===sel?' selected':'')+'>'+esc(s.name)+'</option>'}).join("")+'</select>';
+}
+function suggestionBlock(mid,missing){
+  if(!state.sessions.length)return '<p class="contrib" style="padding:0">Crée d\'abord une séance pour pouvoir ajouter des exercices.</p>';
+  var sug=suggestFor(mid,missing);
+  if(!sug.length)return '<p class="contrib" style="padding:0">Pas d\'autre exercice dans la bibliothèque pour ce muscle : ajoute des séries aux exercices existants.</p>';
+  var best=bestSession(mid);
+  var h='<div class="sugg-list">';
+  sug.forEach(function(o,i){
+    h+='<div class="sugg"><div class="sugg-top"><b>'+esc(o.x.n)+'</b>'+(o.x.stretch?'<span class="pill">Position étirée</span>':'')+'</div><p>'+esc(o.x.why)+'</p><div class="sugg-meta">'+o.sets+' × '+esc(o.x.r)+' · '+esc(o.x.rest)+(o.x.src?' · <a href="'+SRC[o.x.src].u+'" target="_blank" rel="noopener">étude</a>':'')+'</div>'+
+      '<div class="sugg-act"><span>Ajouter à</span>'+sessionSelect("sg-"+mid+"-"+i,best&&best.id)+'<button class="btn primary" type="button" data-sugg="'+mid+'|'+i+'|'+o.sets+'">Ajouter</button></div></div>';
+  });
+  return h+'</div>';
+}
+function bindSuggestions(root,mid,missing,after){
+  var sug=suggestFor(mid,missing);
+  root.querySelectorAll('[data-sugg^="'+mid+'|"]').forEach(function(b){
+    b.addEventListener("click",function(){
+      var parts=b.dataset.sugg.split("|"),o=sug[Number(parts[1])];if(!o)return;
+      var sel=root.querySelector("#sg-"+mid+"-"+parts[1]);
+      addSuggested(mid,o.x,Number(parts[2]),sel.value);
+      b.textContent="Ajouté ✓";b.disabled=true;if(after)after();
+    });
+  });
+}
+
+function analyse(){
+  var V=volumes(),items=[];
+  var add=function(sev,title,txt,src,mid,missing){items.push({sev:sev,title:title,txt:txt,src:src,mid:mid,missing:missing})};
+  if(!state.sessions.length){add("low","Aucune séance","Crée tes séances dans l'onglet Programme, puis relance l'analyse.");return items}
+  state.muscles.forEach(function(m){
+    var L=lvl(m.level),v=V[m.id].total;if(L.max===0)return;
+    if(v<L.min)add("low",m.name+" : il manque "+fmt(L.min-v)+" série"+(L.min-v>=2?"s":""),"Objectif "+L.name+" : "+L.min+" à "+L.max+" séries effectives par semaine. Tu en as "+fmt(v)+"."+(L.min-v<=1.5?" Le plus simple : ajoute 1 série à un exercice existant.":""),"pelland",m.id,L.min-v);
+    else if(v>L.max)add("high",m.name+" : "+fmt(v-L.max)+" série"+(v-L.max>=2?"s":"")+" de trop","Au-dessus de "+L.max+" séries pour un muscle en "+L.name+". Retire des séries ou passe le muscle en priorité plus haute si c'est voulu.","pelland",m.id);
+  });
+  state.sessions.forEach(function(s){
+    state.muscles.forEach(function(m){
+      var t=sessionTotalFor(s,m.id);
+      if(t>11)add("high",m.name+" : "+fmt(t)+" séries dans « "+s.name+" »","Au-delà d'environ 11 séries effectives par séance pour un muscle, les séries en plus n'apportent presque plus rien. Déplace une partie de ces séries vers une autre séance.","remmert");
+    });
+    var tot=sessSets(s);
+    if(tot>26)add("info","« "+s.name+" » est longue : "+tot+" séries","Repère pratique : au-delà de 20 à 25 séries, la fatigue fait baisser la qualité des dernières séries. Pense à répartir sur une autre séance.");
+  });
+  state.muscles.forEach(function(m){
+    var L=lvl(m.level);if(m.level!=="prio"&&m.level!=="mod")return;
+    if(V[m.id].total>=L.min&&V[m.id].freq<2)add("info",m.name+" : travaillé 1 seule fois par semaine","À volume égal, la fréquence change peu la prise de muscle. Mais répartir sur 2 séances évite de dépasser le plafond de séries utiles par séance et améliore la qualité des séries.","pelland");
+  });
+  if(muscle("triceps")&&trainsMain("triceps")&&!hasEx("triceps",/t[eê]te|nuque|overhead|au-dessus|front|skull/))add("tip","Triceps : ajoute une extension au-dessus de la tête","Bras au-dessus de la tête, la longue portion du triceps travaille étirée : environ 1,4 fois plus de croissance qu'avec les extensions à la poulie haute.","maeo23","triceps");
+  if(muscle("ischios")&&trainsMain("ischios")&&!hasEx("ischios",/assis|seated/))add("tip","Ischios : préfère le leg curl assis","Hanche fléchie, les ischios sont plus étirés : +14 % de croissance contre +9 % en leg curl couché.","maeo21","ischios");
+  if(muscle("mollets")&&trainsMain("mollets")&&!hasEx("mollets",/debout|presse|standing/))add("tip","Mollets : fais-les debout","Les mollets debout font plus grossir les gastrocnémiens que les mollets assis.","kino23","mollets");
+  return items;
+}
+function openAnalyse(){
+  var items=analyse(),order={low:0,high:1,tip:2,info:3},label={low:"Manque",high:"À réduire",tip:"Meilleur choix",info:"Conseil"};
+  items.sort(function(a,b){return order[a.sev]-order[b.sev]});
+  var crit=items.filter(function(i){return i.sev==="low"||i.sev==="high"}).length;
+  var h='<h3>Analyse du programme</h3>';
+  h+='<div class="an-score '+(crit?'warn':'good')+'"><b>'+(items.length?(crit?crit+' point'+(crit>1?'s':'')+' à corriger':'Programme solide'):'Programme validé')+'</b><span>'+(items.length?items.length+' recommandation'+(items.length>1?'s':'')+' au total, basées sur les études ci-dessous':'Volume, répartition et choix d\'exercices sont dans les clous.')+'</span></div>';
+  items.forEach(function(it,i){
+    h+='<div class="an-item an-'+it.sev+'"><div class="an-h"><span class="an-tag">'+label[it.sev]+'</span><b>'+esc(it.title)+'</b></div><p>'+esc(it.txt)+(it.src?' <a href="'+SRC[it.src].u+'" target="_blank" rel="noopener">Source</a>':'')+'</p>';
+    var dupLow=it.sev==="tip"&&items.some(function(o){return o.sev==="low"&&o.mid===it.mid});
+    if(it.mid&&(it.sev==="low"||(it.sev==="tip"&&!dupLow)))h+='<details'+(i<2?' open':'')+'><summary>Exercices conseillés</summary>'+suggestionBlock(it.mid,it.sev==="low"?it.missing:0)+'</details>';
+    h+='</div>';
+  });
+  h+='<details class="an-src"><summary>Études utilisées</summary><ul>'+Object.keys(SRC).map(function(k){return '<li><a href="'+SRC[k].u+'" target="_blank" rel="noopener">'+esc(SRC[k].t)+'</a></li>'}).join("")+'</ul><p>Les fourchettes de séries par priorité restent tes réglages : l\'analyse ne les modifie pas.</p></details>';
+  h+='<div class="btns"><button class="btn primary" id="anClose" type="button">Fermer</button><button class="btn" id="anRedo" type="button">Relancer l\'analyse</button></div>';
+  openSheet(h,function(sh){
+    sh.querySelector("#anClose").addEventListener("click",closeSheet);
+    sh.querySelector("#anRedo").addEventListener("click",openAnalyse);
+    var seen={};items.forEach(function(it){if(it.mid&&!seen[it.mid]&&(it.sev==="low"||it.sev==="tip")){seen[it.mid]=1;var lowIt=items.filter(function(o){return o.sev==="low"&&o.mid===it.mid})[0];bindSuggestions(sh,it.mid,lowIt?lowIt.missing:0)}});
+  });
+}
+
+/* ---------- fiche une page ---------- */
+var FCOL={purple:"#7c5cff",blue:"#2f80ed",amber:"#d98b12",green:"#1fa463",red:"#e0493a",gray:"#6b717a"};
+var FSIZES=[12.5,11.8,11,10.3,9.6,9,8.4];
+function mname(id){var m=muscle(id);return m?m.name:""}
+function ficheHTML(notes){
+  var p=activeProfile(),V=volumes(),today=new Date();
+  var dateTxt=today.toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});
+  var byDay={};state.sessions.forEach(function(s){if(s.day!==""&&s.day!=null)byDay[s.day]=s});
+  var h='<div class="f-head"><img src="icon-192.png" alt=""><div><h1>Programme d\'entraînement</h1><p>'+esc(p.name)+' · '+fmt(totalSets())+' séries / semaine · '+dateTxt+'</p></div><div class="f-brand"><b>GymProg</b>Système Fluide</div></div>';
+  h+='<div class="f-week">'+DAYS.map(function(d,i){var s=byDay[i];return '<div class="'+(s?'on':'off')+'"><small>'+d+'</small>'+(s?esc(s.name):'Repos')+'</div>'}).join("")+'</div>';
+  h+='<div class="f-grid">';
+  sortedSessions().forEach(function(s){
+    var dayTxt=(s.day!==""&&s.day!=null)?DAYS[s.day]+' · ':'';
+    h+='<div class="f-sess" style="--c:'+(FCOL[s.color]||FCOL.gray)+'"><div class="f-sh">'+esc(dayTxt)+esc(s.name)+'<span>'+sessSets(s)+' séries</span></div><table><thead><tr><th>Exercice</th><th class="c">Séries</th><th class="c">Reps</th><th class="c">Repos</th></tr></thead><tbody>';
+    s.exercises.forEach(function(e){
+      var n=Number(e.sets)||0,mu=[mname(e.main),e.sec?mname(e.sec):""].filter(Boolean).join(" + ");
+      h+='<tr class="'+(n?'':'f-warm')+'"><td><span class="f-ex">'+esc(e.name)+'</span>'+(mu?'<span class="f-mu">'+esc(mu)+'</span>':'')+(notes&&e.notes&&e.notes.length?'<span class="f-no">'+esc(e.notes.join(" · "))+'</span>':'')+'</td><td class="n">'+(n||'–')+'</td><td class="r">'+(e.reps?esc(e.reps):'–')+'</td><td class="r">'+(e.rest?esc(e.rest):'–')+'</td></tr>';
+    });
+    if(!s.exercises.length)h+='<tr><td colspan="4" style="color:#8a9099">Aucun exercice</td></tr>';
+    h+='</tbody></table></div>';
+  });
+  h+='</div>';
+  h+='<div class="f-vol"><h4>Séries effectives par semaine</h4><div>';
+  state.levels.forEach(function(L){state.muscles.filter(function(m){return m.level===L.id}).forEach(function(m){
+    var st=status(m,V[m.id].total);if(st.k==="none"&&!V[m.id].total)return;
+    h+='<span class="'+st.k+'">'+esc(m.name)+' <i>'+fmt(V[m.id].total)+(L.max?' / '+L.min+'–'+L.max:'')+'</i></span>';
+  })});
+  h+='</div></div><div class="f-foot"><span>GymProg · '+esc(p.name)+'</span><span>Série principale = 1 · secondaire = '+fmt(state.coef)+'</span></div>';
+  return h;
+}
+var fx=document.getElementById("fx"),fiche=document.getElementById("fiche"),fxScale=document.getElementById("fxScale");
+function fxMsg(t){document.getElementById("fxMsg").textContent=t||""}
+function fitFiche(){
+  var notesBox=document.getElementById("fxNotes"),msg="";
+  function tryFit(notes){
+    fiche.innerHTML=ficheHTML(notes);
+    for(var i=0;i<FSIZES.length;i++){fiche.style.setProperty("--fs",FSIZES[i]+"px");if(fiche.scrollHeight<=1124)return true}
+    return false;
+  }
+  var ok=tryFit(notesBox.checked);
+  if(!ok&&notesBox.checked){notesBox.checked=false;ok=tryFit(false);msg="Remarques masquées pour que tout tienne sur une page."}
+  if(!ok)msg="Programme très long : la fiche dépasse un peu d'une page.";
+  fxMsg(msg);scaleFiche();
+}
+function scaleFiche(){
+  var avail=Math.min(window.innerWidth-24,900),k=Math.min(1,avail/794);
+  fxScale.style.transform="scale("+k+")";fxScale.style.width=(794*k)+"px";fxScale.style.height=(fiche.offsetHeight*k)+"px";
+  fiche.style.transformOrigin="top left";fxScale.style.transformOrigin="top left";
+  fxScale.style.transform="none";fiche.style.transform="scale("+k+")";
+}
+function openFiche(){fx.classList.add("open");document.body.style.overflow="hidden";fitFiche();document.getElementById("fxClose").focus()}
+function closeFiche(){fx.classList.remove("open");document.body.style.overflow="";fxMsg("")}
+document.getElementById("fxClose").addEventListener("click",closeFiche);
+document.getElementById("fxNotes").addEventListener("change",fitFiche);
+window.addEventListener("resize",function(){if(fx.classList.contains("open"))scaleFiche()});
+document.getElementById("fxPrint").addEventListener("click",function(){
+  var t=fiche.style.transform;fiche.style.transform="none";
+  try{window.print()}catch(e){fxMsg("L'impression n'est pas disponible ici : utilise Partager l'image.")}
+  setTimeout(function(){fiche.style.transform=t},300);
+});
+var h2cLoading=null;
+function loadH2C(){
+  if(window.html2canvas)return Promise.resolve();
+  if(h2cLoading)return h2cLoading;
+  h2cLoading=new Promise(function(res,rej){var sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";sc.onload=res;sc.onerror=function(){h2cLoading=null;rej()};document.head.appendChild(sc)});
+  return h2cLoading;
+}
+document.getElementById("fxShare").addEventListener("click",function(){
+  var btn=this;btn.disabled=true;fxMsg("Création de l'image…");
+  loadH2C().then(function(){
+    var t=fiche.style.transform;fiche.style.transform="none";
+    return (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){
+      return window.html2canvas(fiche,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,width:794,height:fiche.scrollHeight,windowWidth:1000});
+    }).then(function(canvas){fiche.style.transform=t;return new Promise(function(r){canvas.toBlob(r,"image/png")})},function(e){fiche.style.transform=t;throw e});
+  }).then(function(blob){
+    var name="gymprog-"+activeProfile().name.toLowerCase().replace(/[^a-z0-9]+/gi,"-")+".png";
+    var file=null;try{file=new File([blob],name,{type:"image/png"})}catch(e){}
+    if(file&&navigator.canShare&&navigator.canShare({files:[file]})){
+      return navigator.share({files:[file],title:"Programme "+activeProfile().name}).then(function(){fxMsg("")},function(){fxMsg("")});
+    }
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1500);fxMsg("Image téléchargée.");
+  }).catch(function(){fxMsg("Impossible de créer l'image. Vérifie ta connexion la première fois, ou fais une capture d'écran.")})
+  .then(function(){btn.disabled=false});
+});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&fx.classList.contains("open"))closeFiche()});
+
 /* ---------- events ---------- */
 document.getElementById("view").addEventListener("click",function(ev){
+  if(ev.target.closest("#openFiche")){openFiche();return}
+  if(ev.target.closest("[data-analyse]")){openAnalyse();return}
   var t=ev.target.closest("[data-muscle],[data-addmuscle],[data-ex],[data-addex],[data-editsession],#addSession");
   if(!t)return;
   if(t.dataset.muscle)editMuscle(t.dataset.muscle);

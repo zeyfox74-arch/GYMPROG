@@ -1,5 +1,5 @@
 // Cache hors ligne de GymProg. Change VERSION à chaque mise à jour du site.
-const VERSION = "gymprog-v5";
+const VERSION = "gymprog-v7";
 const CORE = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
@@ -18,7 +18,7 @@ self.addEventListener("fetch", e => {
     return;
   }
   // Fichiers et polices : cache d'abord
-  if (url.origin === location.origin || url.hostname.endsWith("fonts.googleapis.com") || url.hostname.endsWith("fonts.gstatic.com")) {
+  if (url.origin === location.origin || url.hostname.endsWith("fonts.googleapis.com") || url.hostname.endsWith("fonts.gstatic.com") || url.hostname === "cdnjs.cloudflare.com") {
     e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => {
       const c = r.clone(); caches.open(VERSION).then(x => x.put(e.request, c)); return r;
     })));
